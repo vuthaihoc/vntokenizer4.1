@@ -1,0 +1,27 @@
+CHANGES
+=======
+
+Version 4.1.1c, 03 August 2010
+
+- Sửa lỗi nhận dạng email và thiếu tính nhất quán khi tách dấu hai chấm trong allcaps và entity.
+- Cải thiện tốc độ nhận dạng regular expressions. 
+
+Version 4.1.1, 28 December 2009
+
+Thay đổi kể từ phiên bản 4.1.0:
+
+- Các từ bị vnTokenizer nhận dạng là tên riêng có âm tiết đầu tiên là "Ông", "Bà"... (chữ cái đầu viết hoa) thì 
+	cần tách ra, ví dụ: 
+	"Ông Nguyễn Tấn Dũng" cần được tách thành 2 từ là "Ông" và "Nguyễn Tấn Dũng". Danh sách tất cả các âm tiết 
+	đầu câu cần tách do người sử dụng định nghĩa, được ghi trong tệp resources/prefix/namedEntityPrefix.xml.
+
+- Tách các trường hợp:
+
+    * năm + số : (năm_2009 → năm 2009)
+    * con số + trăm, ngàn/nghìn, vạn, triệu, tỉ (6_nghìn  → 6 nghìn; 5_triệu  → 5 triệu, ...)
+    * số ghi bằng chữ + trăm, ngàn/nghìn, vạn, triệu, tỉ (năm_nghìn  → năm nghìn, ...)
+
+- Bổ sung thêm khoảng 20 từ vào từ điển (Tổng số: 41580 mục từ).
+
+- Bổ sung từ điển ngoài cho chương trình. Người sử dụng có thể thêm các từ tùy ý vào trong tệp 
+	resources/externalLexicon.xml. 
