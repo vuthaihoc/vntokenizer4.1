@@ -1,0 +1,3 @@
+Main-Class: vn.hus.nlp.tokenizer.VietTokenizer
+Class-Path: lib/commons-cli-1.2.jar lib/junit.jar lib/maxent-2.5.2.jar lib/opennlp-tools-1.4.3.jar lib/trove.jar lib/vn.hus.nlp.sd-2.0.0.jar lib/vn.hus.nlp.utils-1.0.0.jar lib/vn.hus.nlp.fsm-1.0.0.jar
+
